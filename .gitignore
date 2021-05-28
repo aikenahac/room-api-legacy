@@ -1,0 +1,7 @@
+# IDE
+.idea/
+.vscode/
+
+# project
+node_modules/
+.env
