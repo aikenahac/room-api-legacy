@@ -5,29 +5,8 @@ const appletv = require("../modules/appletv");
 
 /**
  * @method - POST
- * @param - /wakeUp
- * @description - Wake AppleTV up
- */
-
-router.post("/wakeUp", async (req, res) => {
-    try {
-        await appletv.menu(req.app.get('device'));
-
-        res.send({
-            message: "Wake up"
-        })
-    } catch (err) {
-        res.status(500);
-        res.send({
-            message: "Error in waking up."
-        })
-    }
-})
-
-/**
- * @method - POST
- * @param - /wakeUp
- * @description - Wake AppleTV up
+ * @param - /menu
+ * @description - Menu
  */
 
 router.post("/menu", async (req, res) => {
