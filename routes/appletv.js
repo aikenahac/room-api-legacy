@@ -17,6 +17,7 @@ router.post("/wakeUp", async (req, res) => {
             message: "Wake up"
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in waking up."
         })
@@ -37,6 +38,7 @@ router.post("/menu", async (req, res) => {
             message: "Menu"
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in menuing."
         })
@@ -57,6 +59,7 @@ router.post("/play", async (req, res) => {
             message: "Played."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in playing."
         })
@@ -97,6 +100,7 @@ router.post("/ok", async (req, res) => {
             message: "OK."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in OK-ing."
         })
@@ -117,6 +121,7 @@ router.post("/up", async (req, res) => {
             message: "UP."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in UP."
         })
@@ -137,6 +142,7 @@ router.post("/down", async (req, res) => {
             message: "DOWN."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in down."
         })
@@ -157,6 +163,7 @@ router.post("/right", async (req, res) => {
             message: "RIGHT."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in right."
         })
@@ -177,6 +184,7 @@ router.post("/left", async (req, res) => {
             message: "LEFT."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in left."
         })

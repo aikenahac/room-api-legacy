@@ -19,6 +19,7 @@ router.put("/powerOff", async (req, res) => {
             message: "Turned off."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in turning off"
         })
@@ -39,6 +40,7 @@ router.put("/powerOn", async (req, res) => {
             message: "Turned on."
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in turning on"
         })
@@ -59,6 +61,7 @@ router.put("/volumeUp", async (req, res) => {
             message: "Turned up volume"
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in turnig up volume"
         })
@@ -79,6 +82,7 @@ router.put("/volumeDown", async (req, res) => {
             message: "Turned down volume"
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in turnig down volume"
         })
@@ -99,6 +103,7 @@ router.put("/toggleMute", async (req, res) => {
             message: "Toggled mute"
         })
     } catch (err) {
+        res.status(500);
         res.send({
             message: "Error in toggling mute"
         })
