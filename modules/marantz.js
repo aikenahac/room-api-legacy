@@ -1,5 +1,10 @@
 const axios = require("axios")
-const url = "http://192.168.1.182";
+
+const {
+    MARANTZ_IP
+} = require("../config.json");
+
+const url = MARANTZ_IP;
 
 module.exports = {
     async powerOn() {
