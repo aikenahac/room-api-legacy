@@ -45,4 +45,44 @@ router.put("/powerOn", async (req, res) => {
     }
 })
 
+/**
+ * @method - PUT
+ * @param - /volumeUp
+ * @description - Turn up volume
+ */
+
+router.put("/volumeUp", async (req, res) => {
+    try {
+        await marantz.volumeUp();
+
+        res.send({
+            message: "Turned up volume"
+        })
+    } catch (err) {
+        res.send({
+            message: "Error in turnig up volume"
+        })
+    }
+})
+
+/**
+ * @method - PUT
+ * @param - /volumeDown
+ * @description - Turn up volume
+ */
+
+router.put("/volumeDown", async (req, res) => {
+    try {
+        await marantz.volumeDown();
+
+        res.send({
+            message: "Turned down volume"
+        })
+    } catch (err) {
+        res.send({
+            message: "Error in turnig down volume"
+        })
+    }
+})
+
 module.exports = router;
