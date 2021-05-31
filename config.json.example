@@ -1,3 +1,4 @@
 {
-  "MARANTZ_IP": "ip"
+  "MARANTZ_IP": "ip",
+  "APPLETV_CREDENTIALS": "creds"
 }

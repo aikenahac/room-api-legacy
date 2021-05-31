@@ -18,5 +18,8 @@ module.exports = {
     },
     async volumeDown() {
         await axios.get(url + "/MainZone/index.put.asp?cmd0=PutMasterVolumeBtn%2F<&cmd1=aspMainZone_WebUpdateStatus%2F");
+    },
+    async toggleMute() {
+        await axios.get(url + "/MainZone/index.put.asp?cmd0=PutVolumeMute%2FTOGGLE&cmd1=aspMainZone_WebUpdateStatus%2F")
     }
 }

@@ -85,4 +85,24 @@ router.put("/volumeDown", async (req, res) => {
     }
 })
 
+/**
+ * @method - PUT
+ * @param - /toggleMute
+ * @description - Toggles mute
+ */
+
+router.put("/toggleMute", async (req, res) => {
+    try {
+        await marantz.toggleMute();
+
+        res.send({
+            message: "Toggled mute"
+        })
+    } catch (err) {
+        res.send({
+            message: "Error in toggling mute"
+        })
+    }
+})
+
 module.exports = router;
