@@ -2,7 +2,7 @@ const express = require("express");
 const appletv = require("node-appletv-x");
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8585;
 
 const marantzRoutes = require("./routes/marantz");
 const appletvRoutes = require("./routes/appletv");
@@ -49,6 +49,7 @@ app.use("/marantz", marantzRoutes);
 app.use("/appletv", appletvRoutes);
 
 app.listen(PORT, () => {
+    console.log("Initiating!");
     connectAppleTV().then(() => {
         console.log("Paired AppleTV.");
         app.set('device', device);
