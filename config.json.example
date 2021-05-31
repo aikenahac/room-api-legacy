@@ -1,5 +1,4 @@
 {
-  "AUTH_KEY": "string",
   "MARANTZ_IP": "ip",
   "APPLETV_UUID": "uuid",
   "APPLETV_CREDENTIALS": "creds"
